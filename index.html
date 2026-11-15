@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="theme-color" content="#0b0d12">
+  <title>大美王朝：资本大佬挨毒打记</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background: #0b0d12;
+      color: #f4f4f5;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    header {
+      padding: 48px 20px 36px;
+      text-align: center;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      position: sticky;
+      top: 0;
+      background: rgba(11,13,18,0.95);
+      backdrop-filter: blur(12px);
+      z-index: 100;
+    }
+    header h1 {
+      font-size: clamp(1.4rem, 5vw, 2.2rem);
+      letter-spacing: -0.02em;
+      margin-bottom: 6px;
+    }
+    header h1 .red { color: #ef4444; }
+    header p {
+      color: #9ca3af;
+      font-size: 0.85rem;
+    }
+    .page {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 24px 16px;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .page-num {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+    .page-num .badge {
+      width: 32px;
+      height: 32px;
+      line-height: 32px;
+      text-align: center;
+      border-radius: 50%;
+      background: #1b4dff;
+      font-weight: 700;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+    .page-num .title {
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+    .page img {
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.08);
+      display: block;
+      margin-bottom: 16px;
+    }
+    .script {
+      background: #15181f;
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+    .script .label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #6b7280;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+    .narration {
+      color: #f59e0b;
+      font-weight: 600;
+      margin-bottom: 10px;
+      font-size: 0.95rem;
+    }
+    .line {
+      margin-bottom: 8px;
+      padding-left: 12px;
+      border-left: 3px solid #1b4dff;
+      font-size: 0.92rem;
+    }
+    .line:last-child { margin-bottom: 0; }
+    .line .who {
+      color: #ef4444;
+      font-weight: 700;
+      margin-right: 6px;
+    }
+    .note {
+      color: #6b7280;
+      font-size: 0.82rem;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px dashed rgba(255,255,255,0.08);
+    }
+    footer {
+      text-align: center;
+      padding: 40px 20px 56px;
+      color: #4b5563;
+      font-size: 0.8rem;
+    }
+    /* 点击图片全屏查看 */
+    .page img { cursor: zoom-in; }
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.92);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    .lightbox.show { display: flex; }
+    .lightbox img {
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 8px;
+      cursor: zoom-out;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>大美王朝：<span class="red">资本大佬挨毒打记</span></h1>
+    <p>9页讽刺漫画 · 手机高清浏览</p>
+  </header>
+
+  <section class="page">
+    <div class="page-num"><div class="badge">1</div><div class="title">封神榜（封面）</div></div>
+    <img src="web/page01.jpg" alt="第1页" onclick="showLightbox(this.src)">
+    <div class="script">
+      <div class="label">脚本</div>
+      <div class="narration">砸了5亿美金，买来一张传票？扒一扒大美王朝的"顶级冤大头"！</div>
+      <div class="line"><span class="who">马斯克：</span>我砸了整整5亿美金啊！！</div>
+      <div class="note">天平两端：左马斯克抱钞票，右传票+"渣男"破皮衣。黄仁勋暗中观察。</div>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="page-num"><div class="badge">2</div><div class="title">德州大反转</div></div>
+    <img src="web/page02.jpg" alt="第2页" onclick="showLightbox(this.src)">
+    <div class="script">
+      <div class="label">脚本</div>
+      <div class="narration">老百姓不懂什么"AI国运"、"星辰大海"。</div>
+      <div class="line"><span class="who">大叔：</span>你们搞算力发财，老子电费单子拉得比卷纸还长？！投民主党去！</div>
+      <div class="note">字幕：德州，翻蓝了。</div>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="page-num"><div class="badge">3</div><div class="title">马斯克的悲痛欲绝</div></div>
+    <img src="web/page03.jpg" alt="第3页" onclick="showLightbox(this.src)">
+    <div class="script">
+      <div class="label">脚本</div>
+      <div class="narration">钱花了，德州还是蓝了。但真正的暴击，在华盛顿。</div>
+      <div class="line"><span class="who">马斯克：</span>我的五亿刀！我的太空激光呢？！说好的铁盘呢？！</div>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="page-num"><div class="badge">4</div><div class="title">传票雨</div></div>
+    <img src="web/page04.jpg" alt="第4页" onclick="showLightbox(this.src)">
+    <div class="script">
+      <div class="label">脚本</div>
+      <div class="narration">民主党夺回国会，手里有了一样大杀器——传票权。</div>
+      <div class="line"><span class="who">加西亚：</span>查！给他算总账！</div>
+      <div class="line"><span class="who">马斯克：</span>这五亿到底买了个啥？！</div>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="page-num"><div class="badge">5</div><div class="title">黄老板危机降临</div></div>
+    <img src="web/page05.jpg" alt="第5页" onclick="showLightbox(this.src)">
+    <div class="script">
+      <div class="label">脚本</div>
+      <div class="narration">画风突变为"港媒八卦封面"。</div>
+      <div class="line"><span class="who">黄仁勋：</span>完蛋，这要是被定性成"泄密"，英伟达要遭天谴！</div>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="page-num"><div class="badge">6</div><div class="title">公关大师的绝杀</div></div>
+    <img src="web/page06.jpg" alt="第6页" onclick="showLightbox(this.src)">
+    <div class="script">
+      <div class="label">脚本</div>
+      <div class="narration">认了"渣男"，顶多算私德有亏；沾了"违规泄密"，那是公司原地倒闭！</div>
+      <div class="line"><span class="who">黄仁勋：</span>我认错！我对不起老婆！我是渣男！</div>
+      <div class="line"><span class="who">内心OS：</span>渣男就渣男，总比背黑锅强！</div>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="page-num"><div class="badge">7</div><div class="title">十五天光速下台</div></div>
+    <img src="web/page07.jpg" alt="第7页" onclick="showLightbox(this.src)">
+    <div class="script">
+      <div class="label">脚本</div>
+      <div class="narration">从丑闻曝光到下台，仅仅十五天！</div>
+      <div class="line"><span class="who">董事会：</span>别查了，赶紧走！我们要保住股价！</div>
+      <div class="note">字幕：断臂求生，干脆利落。</div>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="page-num"><div class="badge">8</div><div class="title">哑炮大赏</div></div>
+    <img src="web/page08.jpg" alt="第8页" onclick="showLightbox(this.src)">
+    <div class="script">
+      <div class="label">脚本</div>
+      <div class="narration">但黄老板已经走了。十五天，刚好够用。</div>
+      <div class="line"><span class="who">萨克斯：</span>司法部说没有，CIA说没有，情报委员会说没有。间谍叙事，宣告破产！</div>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="page-num"><div class="badge">9</div><div class="title">尾声——真理在大炮射程之内</div></div>
+    <img src="web/page09.jpg" alt="第9页" onclick="showLightbox(this.src)">
+    <div class="script">
+      <div class="label">脚本</div>
+      <div class="line"><span class="who">马斯克：</span>我花了5亿，买了个传票……</div>
+      <div class="line"><span class="who">黄仁勋：</span>我当了15天渣男，换了公司平安……</div>
+      <div class="narration">商人再大，大不过朝廷。你以为你在买保护，其实你买的是入场券。坐哪一桌，由不得你。</div>
+    </div>
+  </section>
+
+  <footer>
+    <p>点击图片可全屏放大查看</p>
+    <p style="margin-top:6px;">AI生成 · 2026-11-15</p>
+  </footer>
+
+  <!-- 图片点击放大 -->
+  <div class="lightbox" id="lightbox" onclick="this.classList.remove('show')">
+    <img id="lightbox-img" src="">
+  </div>
+
+  <script>
+    function showLightbox(src) {
+      var lb = document.getElementById('lightbox');
+      var img = document.getElementById('lightbox-img');
+      img.src = src;
+      lb.classList.add('show');
+    }
+  </script>
+</body>
+</html>
